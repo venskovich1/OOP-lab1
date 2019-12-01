@@ -1,13 +1,11 @@
 ﻿using DataAccess_Layer;
 using Library;
 using System.Text.RegularExpressions;
-//using System.Text;
 
 namespace Business_Layer
 {
     public static class Business
     {
-        //public static StringBuilder text;
         public static string text;
         public static byte numTypes;
         public static Person[][] person;
@@ -17,7 +15,6 @@ namespace Business_Layer
         static Business()
         {
             text = DataAccess.Read();
-            //text = new StringBuilder(DataAccess.Read());
             numTypes = 3;
             person = fillArray();
             arrStudent = new Student[Amount(0)];
